@@ -1,105 +1,165 @@
 .metrics-grid {
-    display: flex;
-    gap: 1rem;
-    justify-content: center; 
-    /* margin-top: -30rem; 
-    padding-left: 50px;   */
-        
-  } 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.metric-card {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px;        
+  max-width: 300px;
+  min-width: 150px;
+  box-sizing: border-box;
+}
+
+
+
+
+.orders-table {
   
- .metric-card {
-    background: white;
-    padding: 1rem;
-    /* border-radius: 8px; */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    width:'80%';
-    /* border-color: blue;
-    border-width: 1px;
-    border-style: solid; */
-  } 
+  margin: 2rem auto;        
+  border-collapse: collapse;
+
+  text-align: left; 
+  padding-left: 80px;   
+       border-color:#1976d2;
+  border-width: 1px;
+  border-style: solid;  
+  width:100px;
+  height:320px;  
   
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 0.75rem;
+  border: 2px solid #b01976
+ 
+}
+.orders-table tr {
+  border: 2px solid rgb(106, 0, 255);
+}
+
+
+
+.sidebar {
+  width: 200px;
+  background: #87ceeb;
+  color:white;
+  padding: 1rem;
+  height: 100vh;
+  border: 'red';
+border-color: #0d47a1;
+border-width: 1px;
+border-style: solid;
+
+ 
+}
+.user-profile {
+  position: fixed;       
+  top: 1rem;               
+  right: 1rem;              
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;         
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;   
+  border-radius: 8px;          
+  z-index: 1000;               
+}
+.chart-style {
+  display: flex;
+  justify-content: center; 
+  margin-top: 2rem;
+  height: 100%;
+  width:1000px; 
+  margin-left:-70px ;     
+}
+.react-select-container {
+  width: 300px; 
+}
+.dash-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: auto;         
+  box-sizing: border-box;
+}
+.app-container{
+  display: flex;
+flex-direction: row;  
+gap: 20px;
+ 
+}
+.chart-table{
+  display: flex;
+  justify-content: space-between;
+  width:800px;
+}
+
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart-style {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .metric-card {
+    max-width: 100%;
+  }
+
+  .chart-table {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .react-select-container {
+    width: 100%;
+  }
 
   .orders-table {
-    
-    margin: 2rem auto;        
-    border-collapse: collapse;
-    /* width: 30%;                */
-    text-align: left; 
-    padding-left: 80px;   
-         border-color:#1976d2;
-    border-width: 1px;
-    border-style: solid;  
-    width:100px;
-    height:320px;  
-    
+    width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
   }
-  
-  .orders-table th,
-  .orders-table td {
-    padding: 0.75rem;
-    border: 2px solid #b01976
-   
-  }
-  .orders-table tr {
-    border: 2px solid rgb(106, 0, 255);
-  }
-  
+ 
+.user-profile {
+  position: relative;
+  top: unset;
+  right: unset;
+  margin: 1rem auto;
+  width: fit-content;
+  z-index: auto;
+}
 
-  
-  .sidebar {
-    width: 200px;
-    background: #87ceeb;
-    color:white;
-    padding: 1rem;
-    height: 100vh;
-    border: 'red';
-  
-   border-color: #0d47a1;
-  border-width: 1px;
-  border-style: solid;
-   
-  }
-  .user-profile {
-    position: absolute;       
-    top: 1rem;               
-    right: 1rem;              
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;         
-    padding: 0.5rem 1rem;
-    background-color: #f5f5f5;   
-    border-radius: 8px;          
-    z-index: 1000;               
-  }
-  .chart-style {
-    display: flex;
-    justify-content: center; 
-    margin-top: 2rem;
-    height: 100%;
-    width:1000px; 
-    margin-left:-70px ;     
-  }
-  .react-select-container {
-    width: 300px; 
-  }
-  .dash-board{
-    /* border: #87ceeb;
-    border-width: 3rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-   height: 100vh;
-  }
-  .app-container{
-    display: flex;
-  flex-direction: row;  
-  gap: 20px;
-  }
-  .chart-table{
-    display: flex;
-    justify-content: space-between;
-    width:800px;
-  }
-  
+.dash-board {
+  padding-top: 0; 
+}
+
+.metrics-grid {
+  margin-top: 1rem; 
+}
+.metric-card {
+  flex: 1 1 100%;        
+  max-width: 100%;
+}
+
+}

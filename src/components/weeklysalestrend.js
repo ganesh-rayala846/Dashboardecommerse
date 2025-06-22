@@ -15,7 +15,7 @@ const data = [
 
 const WeeklySalesChart = () => (
     <div className='chart-style'>
-  <ResponsiveContainer width="90%" height={350}>
+  <ResponsiveContainer width="80%" height={350}>
     <LineChart data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="day" />
